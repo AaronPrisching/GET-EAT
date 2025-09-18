@@ -1,0 +1,570 @@
+{
+  "_documentation": {
+    "description": "GetEat App Datenbank - Alle Anwendungsdaten werden hier gespeichert",
+    "version": "1.0.0",
+    "lastUpdated": "2024-12-19T15:30:00.000Z",
+    "structure": {
+      "adminSettings": "Administrator-Einstellungen und Konfiguration",
+      "restaurants": "Liste aller verfügbaren Restaurants mit Menüs",
+      "weekDays": "Wochentage für die Planung (Montag-Freitag)",
+      "votes": "Abstimmungen pro Tag und Restaurant",
+      "participants": "Teilnehmer pro Wochentag",
+      "orders": "Alle Bestellungen organisiert nach Wochentagen",
+      "cart": "Aktuelle Warenkörbe der Benutzer",
+      "orderHistory": "Bestellhistorie pro Benutzer",
+      "orderStatuses": "Status der Bestellungen (pending/paid/delivered)",
+      "users": "Registrierte Benutzer mit Credentials"
+    }
+  },
+  "adminSettings": {
+    "paypalCodes": {
+      "0": "",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "savedPersons": {},
+    "personsList": []
+  },
+  "restaurants": [
+    {
+      "id": "r1",
+      "name": "Dang Vi",
+      "category": "Asiatisch",
+      "address": "Albert-Ruckdeschel-Str. 16, 95236 Kulmbach",
+      "phone": "09221 823659",
+      "hours": "Montag - Samstag von 9.00 - 20.00 Uhr",
+      "menu": [
+        {
+          "id": "m1",
+          "name": "Sauerscharf Pekingsuppe",
+          "price": 2.00,
+          "category": "Vorspeisen & Suppen"
+        },
+        {
+          "id": "m2",
+          "name": "Glasnudelsuppe mit Hühnchen",
+          "price": 2.50,
+          "category": "Vorspeisen & Suppen"
+        },
+        {
+          "id": "m3",
+          "name": "Gemischter Salat mit Dressing",
+          "price": 2.50,
+          "category": "Vorspeisen & Suppen"
+        },
+        {
+          "id": "m4",
+          "name": "Salatteller mit Hühnerfleisch",
+          "price": 3.90,
+          "category": "Vorspeisen & Suppen"
+        },
+        {
+          "id": "m5",
+          "name": "Salatteller mit knuspriger Hühnerbrust",
+          "price": 6.50,
+          "category": "Vorspeisen & Suppen"
+        },
+        {
+          "id": "m6",
+          "name": "Salatteller mit knuspriger Ente",
+          "price": 7.50,
+          "category": "Vorspeisen & Suppen"
+        },
+        {
+          "id": "m7",
+          "name": "Minihühnergarden - Vegetarisch (7 Stk)",
+          "price": 2.50,
+          "category": "Vorspeisen & Suppen"
+        },
+        {
+          "id": "m8",
+          "name": "Hausgemachte Frühlingsrollen (2 Stk)",
+          "price": 3.00,
+          "category": "Vorspeisen & Suppen"
+        },
+        {
+          "id": "m9",
+          "name": "Bratnudeln und Gemüse",
+          "price": 4.00,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m10",
+          "name": "Bratnudeln mit 5 Stk Mini-Frühlingsrollen",
+          "price": 4.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m11",
+          "name": "Bratnudeln mit knuspriger Ente",
+          "price": 7.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m12",
+          "name": "Bratnudeln mit Huhn",
+          "price": 4.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m13",
+          "name": "Bratnudeln mit Schwein",
+          "price": 5.00,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m14",
+          "name": "Bratnudeln mit Rind",
+          "price": 5.00,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m15",
+          "name": "Bratnudeln mit knuspriger Hühnerbrust",
+          "price": 6.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m16",
+          "name": "Gebratener Reis mit Hühnerfleisch",
+          "price": 5.00,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m17",
+          "name": "Gebratener Reis mit knuspriger Hühnerbrust",
+          "price": 6.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m18",
+          "name": "Gebratener Reis mit knuspriger Ente",
+          "price": 7.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m19",
+          "name": "Gebratener Reis mit Gemüse",
+          "price": 4.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m20",
+          "name": "Gemüsepfanne mit Reis - vegetarisch und Soße nach Wahl",
+          "price": 5.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m21",
+          "name": "Tofu gebraten mit Gemüse und Soße nach Wahl",
+          "price": 6.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m22",
+          "name": "Hühnerfleisch mit versch. Gemüse und Soße nach Wahl",
+          "price": 6.50,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m23",
+          "name": "Knusprige Hühnerbrust mit versch. Gemüse und Soße nach Wahl",
+          "price": 6.90,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m24",
+          "name": "Gebratene Udonnudeln mit Gemüse",
+          "price": 6.00,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m25",
+          "name": "Gebratene Udonnudeln mit Tofu",
+          "price": 7.00,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m26",
+          "name": "Gebratene Udonnudeln mit Huhn",
+          "price": 7.00,
+          "category": "Hauptgerichte"
+        },
+        {
+          "id": "m27",
+          "name": "Hühnerbrustfilet gebacken mit Ananas Süß Sauer und Ingwer",
+          "price": 6.90,
+          "category": "Spezialitäten"
+        },
+        {
+          "id": "m28",
+          "name": "Schweinefleisch mit Gemüse und Soße nach Wahl",
+          "price": 6.50,
+          "category": "Spezialitäten"
+        },
+        {
+          "id": "m29",
+          "name": "Ente knusprig mit Gemüse und Soße nach Wahl",
+          "price": 8.00,
+          "category": "Spezialitäten"
+        },
+        {
+          "id": "m30",
+          "name": "Rindfleisch mit Gemüse und Soße nach Wahl",
+          "price": 6.90,
+          "category": "Spezialitäten"
+        },
+        {
+          "id": "m31",
+          "name": "Ente knusprig mit Ananas Süß Sauer und Ingwer",
+          "price": 8.00,
+          "category": "Spezialitäten"
+        },
+        {
+          "id": "m32",
+          "name": "Seelachsfilet gebacken mit Gemüse und Soße nach Wahl",
+          "price": 7.50,
+          "category": "Spezialitäten"
+        },
+        {
+          "id": "m33",
+          "name": "Gebratene Garnelen mit Gemüse und Soße nach Wahl",
+          "price": 8.50,
+          "category": "Spezialitäten"
+        },
+        {
+          "id": "m34",
+          "name": "Sake Maki (6 Stück)",
+          "price": 3.80,
+          "category": "Maki"
+        },
+        {
+          "id": "m35",
+          "name": "Tekka Maki (8 Stück)",
+          "price": 4.00,
+          "category": "Maki"
+        },
+        {
+          "id": "m36",
+          "name": "Ebi Maki (8 Stück)",
+          "price": 3.80,
+          "category": "Maki"
+        },
+        {
+          "id": "m37",
+          "name": "Surimi Maki (12 Stück)",
+          "price": 3.50,
+          "category": "Maki"
+        },
+        {
+          "id": "m38",
+          "name": "Saki Yaki (9 Stück)",
+          "price": 3.80,
+          "category": "Maki"
+        },
+        {
+          "id": "m39",
+          "name": "Kappa Maki (9 Stück)",
+          "price": 3.00,
+          "category": "Maki"
+        },
+        {
+          "id": "m40",
+          "name": "Avocado Maki (9 Stück)",
+          "price": 3.00,
+          "category": "Maki"
+        },
+        {
+          "id": "m41",
+          "name": "Paprika Maki (9 Stück)",
+          "price": 3.00,
+          "category": "Maki"
+        },
+        {
+          "id": "m42",
+          "name": "Rettich Maki (9 Stück)",
+          "price": 3.00,
+          "category": "Maki"
+        },
+        {
+          "id": "m43",
+          "name": "Kürbis Maki (9 Stück)",
+          "price": 3.00,
+          "category": "Maki"
+        },
+        {
+          "id": "m44",
+          "name": "Sake Nigiri (2 Stück)",
+          "price": 3.00,
+          "category": "Nigiri"
+        },
+        {
+          "id": "m45",
+          "name": "Maguro Nigiri (2 Stück)",
+          "price": 3.50,
+          "category": "Nigiri"
+        },
+        {
+          "id": "m46",
+          "name": "Ebi Nigiri (2 Stück)",
+          "price": 3.00,
+          "category": "Nigiri"
+        },
+        {
+          "id": "m47",
+          "name": "Unagi (2 Stück)",
+          "price": 3.00,
+          "category": "Nigiri"
+        },
+        {
+          "id": "m48",
+          "name": "Avocado (2 Stück)",
+          "price": 3.00,
+          "category": "Nigiri"
+        },
+        {
+          "id": "m49",
+          "name": "California Classic (8 Stück)",
+          "price": 5.00,
+          "category": "Inside Out"
+        },
+        {
+          "id": "m50",
+          "name": "Alaska Inside Out (8 Stück)",
+          "price": 5.20,
+          "category": "Inside Out"
+        },
+        {
+          "id": "m51",
+          "name": "Hawaii Inside Out (8 Stück)",
+          "price": 5.40,
+          "category": "Inside Out"
+        },
+        {
+          "id": "m52",
+          "name": "Ebi Tempura Roll Inside Out (8 Stück)",
+          "price": 5.50,
+          "category": "Inside Out"
+        },
+        {
+          "id": "m53",
+          "name": "Alaska Philadelphia Inside Out (6 Stück)",
+          "price": 5.40,
+          "category": "Inside Out"
+        },
+        {
+          "id": "m54",
+          "name": "Tori Karaage Inside Out (8 Stück)",
+          "price": 5.20,
+          "category": "Inside Out"
+        },
+        {
+          "id": "m55",
+          "name": "Kamo Inside Out (8 Stück)",
+          "price": 5.50,
+          "category": "Inside Out"
+        },
+        {
+          "id": "m56",
+          "name": "Avocado Philadelphia Inside Out (10 Stück)",
+          "price": 4.80,
+          "category": "Inside Out"
+        },
+        {
+          "id": "m57",
+          "name": "Kappa Philadelphia Inside Out (10 Stück)",
+          "price": 4.80,
+          "category": "Inside Out"
+        },
+        {
+          "id": "m58",
+          "name": "Regenbogen Classic (8 Stück)",
+          "price": 6.00,
+          "category": "Special Rolls"
+        },
+        {
+          "id": "m59",
+          "name": "Regenbogen Thunfisch (8 Stück)",
+          "price": 6.50,
+          "category": "Special Rolls"
+        },
+        {
+          "id": "m60",
+          "name": "Regenbogen Avocado (8 Stück)",
+          "price": 6.00,
+          "category": "Special Rolls"
+        },
+        {
+          "id": "m61",
+          "name": "Dragon Roll (8 Stück)",
+          "price": 6.50,
+          "category": "Special Rolls"
+        },
+        {
+          "id": "m62",
+          "name": "Futo Classic (5 Stück)",
+          "price": 5.80,
+          "category": "Futomaki"
+        },
+        {
+          "id": "m63",
+          "name": "Futo Veggie (5 Stück)",
+          "price": 5.50,
+          "category": "Futomaki"
+        },
+        {
+          "id": "m64",
+          "name": "Sake Sashimi (6 Stück)",
+          "price": 7.50,
+          "category": "Sashimi"
+        },
+        {
+          "id": "m65",
+          "name": "Maguro Sashimi (6 Stück)",
+          "price": 8.50,
+          "category": "Sashimi"
+        },
+        {
+          "id": "m66",
+          "name": "Sake & Maguro Sashimi (6 Stück)",
+          "price": 8.00,
+          "category": "Sashimi"
+        },
+        {
+          "id": "m67",
+          "name": "Poke Sake (Bowl)",
+          "price": 8.00,
+          "category": "Poke Bowl"
+        },
+        {
+          "id": "m68",
+          "name": "Poke Maguro (Bowl)",
+          "price": 9.00,
+          "category": "Poke Bowl"
+        },
+        {
+          "id": "m69",
+          "name": "Bratnudeln mit Hühnerfleisch (To Go)",
+          "price": 4.00,
+          "category": "Asiabox To Go"
+        },
+        {
+          "id": "m70",
+          "name": "Bratreis mit Hühnerfleisch (To Go)",
+          "price": 4.50,
+          "category": "Asiabox To Go"
+        },
+        {
+          "id": "m71",
+          "name": "Hausgemachte Frühlingsrollen - Hühnchen 2 Stk (To Go)",
+          "price": 3.00,
+          "category": "Asiabox To Go"
+        },
+        {
+          "id": "m72",
+          "name": "Hühnerfleisch knusprig mit Bratnudeln (To Go)",
+          "price": 6.50,
+          "category": "Asiabox To Go"
+        },
+        {
+          "id": "m73",
+          "name": "7 Stk. Minihühnergarden - vegetarisch (To Go)",
+          "price": 2.50,
+          "category": "Asiabox To Go"
+        },
+        {
+          "id": "m74",
+          "name": "Ente knusprig mit Bratnudeln (To Go)",
+          "price": 7.50,
+          "category": "Asiabox To Go"
+        },
+        {
+          "id": "m75",
+          "name": "Extra Reis oder Soße",
+          "price": 2.00,
+          "category": "Extras"
+        },
+        {
+          "id": "m76",
+          "name": "Knusprige Hühnerbrust",
+          "price": 3.50,
+          "category": "Extras"
+        },
+        {
+          "id": "m77",
+          "name": "Knusprige Ente",
+          "price": 4.50,
+          "category": "Extras"
+        },
+        {
+          "id": "m78",
+          "name": "Cola",
+          "price": 2.00,
+          "category": "Getränke"
+        },
+        {
+          "id": "m79",
+          "name": "Fanta",
+          "price": 2.00,
+          "category": "Getränke"
+        },
+        {
+          "id": "m80",
+          "name": "Spezi",
+          "price": 2.00,
+          "category": "Getränke"
+        },
+        {
+          "id": "m81",
+          "name": "Apfelschorle",
+          "price": 2.00,
+          "category": "Getränke"
+        },
+        {
+          "id": "m82",
+          "name": "Wasser",
+          "price": 2.00,
+          "category": "Getränke"
+        }
+      ]
+    }
+  ],
+  "weekDays": ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"],
+  "votes": {
+    "0": {},
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {}
+  },
+  "participants": {
+    "0": [],
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "orders": {
+    "0": [],
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "cart": {},
+  "orderHistory": {},
+  "orderStatuses": {},
+  "users": {
+    "admin_default": {
+      "id": "admin_default",
+      "name": "Administrator",
+      "email": "admin@geteat.local",
+      "password": "admin123",
+      "role": "admin",
+      "createdAt": "2024-01-15T00:00:00.000Z"
+    }
+  }
+}
+
